@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
-#include "Hello.h"
+#include "library1/Hello.h"
 
-TEST(HelloTests, BasicAssertions) {
-    EXPECT_STREQ(Hello::HelloString().c_str(), "Hello, World!");
+TEST(HelloTests, BasicAssertions)
+{
+    EXPECT_STREQ(library1::Hello::HelloString().c_str(), "Library1: Hello, World!");
 }
