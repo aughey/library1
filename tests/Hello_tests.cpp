@@ -3,5 +3,5 @@
 
 TEST(HelloTests, BasicAssertions)
 {
-    EXPECT_STREQ(library1::Hello::HelloString().c_str(), "Library1: Hello, World!");
+    EXPECT_STREQ(library1::Hello::HelloString().c_str(), "library1: Hello, World!");
 }
