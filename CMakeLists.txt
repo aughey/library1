@@ -6,7 +6,9 @@ FILE(GLOB SOURCES src/*.cpp)
 add_library (library1 ${SOURCES})
 
 # 3rd party libraries
-add_subdirectory(../googletest)
-
-enable_testing()
-add_subdirectory(tests)
+# Only add Google Test and tests if this is the main project
+if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
+    add_subdirectory(googletest)
+    enable_testing()
+    add_subdirectory(tests)
+endif()
